@@ -1,0 +1,14 @@
+<div class="ml1 pt1 bands">
+    <h2>Bandas</h2>
+    {% for band in bands %}
+    <div class="bands__containers container__flex flex__between mt1">
+        <p>{{ band.name }}</p>
+        <p>{{ band.email }}</p>
+        <p>{{ band.phone }}</p>
+        <p>{{ band.price }} R$/hr</p>
+        <a href="./edit">Editar</a>
+        <a href="./delete?q={{band.id}}">Deletar</a>
+    </div>
+    {% endfor %}
+</div>
+
