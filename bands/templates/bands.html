@@ -6,7 +6,7 @@
         <p>{{ band.email }}</p>
         <p>{{ band.phone }}</p>
         <p>{{ band.price }} R$/hr</p>
-        <a href="./edit">Editar</a>
+        <a href="./edit?q={{band.id}}">Editar</a>
         <a href="./delete?q={{band.id}}">Deletar</a>
     </div>
     {% endfor %}

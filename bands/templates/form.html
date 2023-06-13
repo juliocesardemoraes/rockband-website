@@ -1,20 +1,24 @@
-<form class="mt1" method="post" action="http://127.0.0.1:8000/bands/add">
+<form class="mt1" method="post" action="{{url}}?q={{id}}">
   {% csrf_token %}
-  <h2>Criar Banda</h2>
+  {% if edit%}
+    <h2>Editar Banda</h2>
+  {% else %}
+    <h2>Criar Banda</h2>
+  {% endif %}
   <div>
-    <input type="text" placeholder="Nome da banda" name="name" id="id_name" required/>
+    <input type="text" value="{{band.name}}"  placeholder="Nome da banda" name="name" id="id_name" required  />
   </div>
   <div>
-    <input type="email" placeholder="Email da banda" name="email" id="id_email" required/>
+    <input type="email"  value="{{band.email}}" placeholder="Email da banda" name="email" id="id_email" required/>
   </div>
   <div>
-    <input type="text" placeholder="Telefone da banda(whatsapp)" name="phone" id="id_phone" required/>
+    <input type="text" value="{{band.phone}}"  placeholder="Telefone da banda(whatsapp)" name="phone" id="id_phone" required/>
   </div>
   <div>
-    <input type="number" placeholder="Valor por hora" name="price" id="id_price" required/>
+    <input type="number" value="{{band.price}}"  placeholder="Valor por hora" name="price" id="id_price" required/>
   </div>
   <div>
-    <input type="url" placeholder="Link de uma imagem da banda" name="image_link" id="id_image_link" required/>
+    <input type="url" value="{{band.image_link}}"  placeholder="Link de uma imagem da banda" name="image_link" id="id_image_link" required/>
   </div>
   <button class="submit" type="submit">Enviar</button>
 </form>
