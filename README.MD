@@ -10,3 +10,7 @@
 
     python manage.py makemigrations bands
     python manage.py migrate
+
+3 - Testes no shell:
+
+    python manage.py shell

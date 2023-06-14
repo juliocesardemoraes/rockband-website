@@ -1,0 +1,9 @@
+.landing__page__title{
+    font-weight: 900;
+    font-size: 164px;
+    margin-top: 8rem;
+}
+
+.unset{
+  all:unset;
+}

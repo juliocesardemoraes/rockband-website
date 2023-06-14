@@ -21,3 +21,11 @@ class Song(models.Model):
     duration = models.DurationField()
     source = models.URLField(default="")
     album = models.ForeignKey(Album, on_delete=models.CASCADE, related_name='songs')
+
+class Dates(models.Model):
+    date = models.DateField()
+    venue = models.CharField(max_length=100)
+    band = models.ForeignKey(Band, on_delete=models.CASCADE, related_name='dates')
+
+    def __str__(self):
+        return f"Date: {self.date} \nVenue: {self.venue}"

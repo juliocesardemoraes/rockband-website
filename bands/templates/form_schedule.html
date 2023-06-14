@@ -1,0 +1,32 @@
+<form class="mt1 ml1" method="post" action="{{url}}?q={{id}}">
+  {% csrf_token %}
+  <h2>Agendar um show</h2>
+  <div>
+    <input
+      type="text"
+      placeholder="Seu nome"
+      name="name"
+      id="id_name"
+      required
+    />
+  </div>
+  <div>
+    <input
+      type="text"
+      placeholder="Seu cpf"
+      name="name"
+      id="id_name"
+      required
+    />
+  </div>
+  <div>
+    <input
+      type="date"
+      min="{{date}}"
+      id="datepicker"
+      name="datepicker"
+      required
+    />
+  </div>
+  <button class="submit" type="submit">Enviar</button>
+</form>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block title%} ROCK BAND {% endblock title%}
+{% block navbar%}
+{% include 'navbar.html' %}
+{% endblock navbar%}
+{% block content%}
+    <div id="landing__page" class="container__flex container__flex__column">
+        <div>
+            <h1 class="landing__page__title">ROCK BAND</h1>
+            <h3>Agende seu show de Rock!</h3>
+        </div>
+        <div id="bands">
+            <h1 class="bands__title above">Bandas</h1>
+                <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                    {% for band in bands %}
+                        <div class="container__flex band">
+                            <h1 class="band__name pos__abs">{{band.name}}</h1>
+                            <img 
+                                class="image"
+                                draggable="false"
+                                src="{{band.image_link}}">
+                            <a href="/agendar?q={{band.id}}" class="pos__abs band__button button__primary">Agendar Show</a>
+                        <div>
+                    {% endfor %}
+                </div>
+        </div>
+    </div>
+{% endblock content%}

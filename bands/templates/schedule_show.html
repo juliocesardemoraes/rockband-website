@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block title%} Agendar Banda {% endblock title%}
+{% block navbar%}
+{% include 'navbar.html' %}
+{% endblock navbar%}
+{% block content%}
+    <div class="container__flex__fluid">
+    {% block band__card %}{% include 'band_card.html'%} {% endblock %}
+    {% block form %} {% include 'form_schedule.html' %} {% endblock %}
+    </div>
+{% endblock content%}

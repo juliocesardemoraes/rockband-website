@@ -1,0 +1,36 @@
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  user-select: none; /* -- Prevent image highlighting -- */
+}
+
+.image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+.band{
+    position: relative;
+}
+
+.band__name{
+    top:1rem;
+    left:1rem;
+}
+
+.pos__abs{
+    position: absolute;
+}
+
+.band__button{
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.bands__title{
+    font-size: 96px;
+    opacity: 0.5;
+  user-select: none; /* -- Prevent image highlighting -- */
+}

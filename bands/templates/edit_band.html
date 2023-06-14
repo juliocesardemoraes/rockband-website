@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block title%} Editar banda {% endblock title%}
+{% block content%}
+    {% block form %} {% include 'form.html' %} {% endblock %}
+    {% if edit == False%}
+        {% block bands%} {% include 'bands.html' %} {% endblock %}
+    {% endif%}
+{% endblock content%}

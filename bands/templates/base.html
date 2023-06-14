@@ -18,16 +18,22 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/landing_page.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/calendar.css' %}" rel="stylesheet" />
     {% block css %}{% endblock %}
   </head>
 
   <body>
-    {% block navbar %} {% include 'navbar.html' %} {% endblock %}
+    {% block navbar %}{% endblock %}
     <div class="container__flex__fluid mt4 "> 
       {% block content %} {% endblock %}
     </div>
     </div>
   </body>
+  <script src="{% static 'js/carousel.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
 </html>

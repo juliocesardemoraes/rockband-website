@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Outfit", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -17,8 +18,8 @@ body {
     #1f2024;
 }
 
-button:hover{
-    cursor: pointer;
+button:hover {
+  cursor: pointer;
 }
 
 .logo__title {
@@ -28,10 +29,46 @@ button:hover{
   word-wrap: break-word;
 }
 
+.button__primary {
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  background: #26272b;
+  box-shadow: -2px -2px 5px rgba(60, 60, 60, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 1rem;
+  transition: 1s all;
+}
+
+.button__primary:hover {
+  color: #222;
+  background: #e0e1e3;
+  box-shadow: -2px -2px 5px rgba(234, 235, 237, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  transition: 1s all;
+}
+
+.button__outline {
+  color: #fff;
+  background: #26272b;
+  box-shadow: -2px -2px 5px rgba(60, 60, 60, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.navbar__adm {
+  justify-content: center;
+}
+
+.landing__page__navbar {
+  justify-content: space-between;
+}
+
 nav {
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -40,79 +77,88 @@ nav {
   width: 100%;
 }
 
-.container__flex{
-    display: flex;
+.container__flex {
+  display: flex;
 }
 
-.container__flex__fluid{
-    display: flex;
+.container__flex__column {
+  flex-direction: column;
 }
 
-.bands{
-  min-width: 350px
+.container__flex__fluid {
+  display: flex;
 }
 
-.bands__containers{
+.bands {
+  min-width: 350px;
+}
+
+#bands {
+  margin-top: 25%;
+}
+
+.bands__containers {
   width: 100%;
   padding: 1rem 2rem;
-  background: #26272B;
+  background: #26272b;
   border-radius: 1rem;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 5px 0px rgba(255, 255, 255, 0.08);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 5px 0px rgba(255, 255, 255, 0.08);
   gap: 1rem;
 }
 
-.flex__between{
-    justify-content: space-between;
+.flex__between {
+  justify-content: space-between;
 }
 
-form{
-    padding: 1rem 3rem 3rem 3rem;
-    background: #26272B;
-    box-shadow: 13px 13px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+form {
+  padding: 1rem 3rem 3rem 3rem;
+  background: #26272b;
+  box-shadow: 13px 13px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
 }
 
-form input{
-    background: none;
-    border: none;
-    font-size: 16px;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    margin-top: 1rem;
-    transition: 1s all;
+form input {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  margin-top: 1rem;
+  transition: 1s all;
 }
 
-form input:focus{
-    outline:  1px solid #fff;
-    font-size: 18px;
-    padding: 2rem 0;
-    transition: 1s all;
+form input:focus {
+  outline: 1px solid #fff;
+  font-size: 18px;
+  padding: 2rem 0;
+  transition: 1s all;
 }
 
-form .submit{
-    border: none;
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-    color: #fff;
-    background: #26272B;
-    box-shadow: inset 0px 2px 4px rgba(255, 255, 255, 0.25);
-    border-radius: 5px;
+form .submit {
+  border: none;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  background: #26272b;
+  box-shadow: inset 0px 2px 4px rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
 }
 
-.pt1{
-    padding-top: 1rem;
+.pt1 {
+  padding-top: 1rem;
 }
 
-.mt1{
-    margin-top: 1rem;
+.mt1 {
+  margin-top: 1rem;
 }
 
-.ml1{
+.ml1 {
   margin-left: 1rem;
 }
 
-.mt4{
-    margin-top: 4rem;
+.mt4 {
+  margin-top: 4rem;
 }
 
 h2 {
@@ -151,8 +197,13 @@ label {
   font-weight: 100;
 }
 
+.above {
+  position: relative;
+  z-index: 2;
+}
+
 @media only screen and (max-width: 1080px) {
-  .container__flex__fluid{
+  .container__flex__fluid {
     flex-direction: column;
   }
 }
