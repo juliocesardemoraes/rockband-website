@@ -7,3 +7,7 @@
 .unset{
   all:unset;
 }
+
+.unset:hover{
+  cursor: pointer;
+}

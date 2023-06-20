@@ -128,12 +128,6 @@ form input {
   transition: 1s all;
 }
 
-form input:focus {
-  outline: 1px solid #fff;
-  font-size: 18px;
-  padding: 2rem 0;
-  transition: 1s all;
-}
 
 form .submit {
   border: none;

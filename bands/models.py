@@ -24,6 +24,7 @@ class Song(models.Model):
 
 class Dates(models.Model):
     date = models.DateField()
+    user_cpf = models.CharField(max_length=11, default="")
     venue = models.CharField(max_length=100)
     band = models.ForeignKey(Band, on_delete=models.CASCADE, related_name='dates')
 
